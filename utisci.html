@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: 'DM Sans', sans-serif; color: #0A2A2E; background: #ffffff; }
+  a { color: #0B6E71; text-decoration: none; transition: color .18s ease; }
+  a:hover { color: #0A2A2E; }
+  ::selection { background: #B8E6E4; }
+
+  html, body { max-width: 100%; overflow-x: hidden; }
+  @media (max-width: 760px) {
+    [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+    [style*="gap:56px"], [style*="gap:64px"], [style*="gap:62px"] { gap: 28px !important; }
+    header nav { display: none !important; }
+    header > div { padding: 0 16px !important; gap: 10px !important; height: 62px !important; }
+    /* header CTA: icon only, compact */
+    header > div > a:last-child { font-size: 0 !important; padding: 10px 14px !important; gap: 0 !important; }
+    header > div > a:last-child svg { width: 20px !important; height: 20px !important; }
+    h1 { font-size: 29px !important; line-height: 1.12 !important; white-space: normal !important; word-break: break-word !important; }
+    h2 { font-size: 23px !important; line-height: 1.18 !important; white-space: normal !important; }
+    h3 { font-size: 18px !important; }
+    p { font-size: 15px !important; }
+    section { padding-top: 36px !important; padding-bottom: 36px !important; }
+    section > div { padding-left: 16px !important; padding-right: 16px !important; }
+    [style*="aspect-ratio:4/5"] { max-width: 240px !important; margin-left: auto !important; margin-right: auto !important; width: 100% !important; }
+    [style*="column-count"] { column-count: 1 !important; }
+    [style*="font-size:56px"], [style*="font-size:52px"], [style*="font-size:40px"], [style*="font-size:38px"] { font-size: 29px !important; }
+    [style*="font-size:19px"] { font-size: 16px !important; }
+    /* stats row: wrap and shrink giant numbers */
+    [style*="gap:38px"] { flex-wrap: wrap !important; gap: 18px 26px !important; }
+    [style*="font-size:30px"] { font-size: 24px !important; }
+    iframe { min-height: 300px !important; }
+  }
+</style>
+</helmet>
+<div style="min-height:100vh;background:#ffffff;">
+
+  <!-- NAV -->
+  <header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.85);backdrop-filter:blur(12px);border-bottom:1px solid #E6EEEE;">
+    <div style="max-width:1200px;margin:0 auto;padding:0 32px;height:76px;display:flex;align-items:center;justify-content:space-between;gap:32px;">
+      <a href="index.html" style="display:flex;align-items:center;gap:12px;color:#0A2A2E;">
+        <span style="width:40px;height:40px;border-radius:11px;background:linear-gradient(135deg,#0B6E71,#14B8A6);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'DM Serif Display';font-weight:700;font-size:20px;">P</span>
+        <span style="font-family:'DM Serif Display';font-weight:700;font-size:18px;letter-spacing:-0.02em;line-height:1.05;">Ordinacija<br><span style="font-weight:500;color:#5B7280;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;">Pavlović</span></span>
+      </a>
+      <nav style="display:flex;align-items:center;gap:34px;">
+        <a href="index.html#o-nama" style="font-weight:600;font-size:15px;color:#3A4E52;">O nama</a>
+        <a href="index.html#usluge" style="font-weight:600;font-size:15px;color:#3A4E52;">Usluge</a>
+        <a href="tim.html" style="font-weight:600;font-size:15px;color:#3A4E52;">Tim</a>
+        <a href="index.html#galerija" style="font-weight:600;font-size:15px;color:#3A4E52;">Galerija</a>
+        <a href="index.html#kontakt" style="font-weight:600;font-size:15px;color:#3A4E52;">Kontakt</a>
+      </nav>
+      <a href="index.html#kontakt" style="display:flex;align-items:center;gap:9px;background:#0B6E71;color:#fff;font-family:'DM Serif Display';font-weight:600;font-size:15px;padding:12px 22px;border-radius:12px;box-shadow:0 8px 20px -8px rgba(11,110,113,0.6);">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        Zakažite pregled
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section style="background:#F5FAFA;border-bottom:1px solid #E9F1F1;">
+    <div style="max-width:1200px;margin:0 auto;padding:64px 32px 56px;">
+      <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;color:#5B7280;font-weight:600;font-size:14px;margin-bottom:22px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg> Nazad na početnu
+      </a>
+      <div style="font-weight:700;color:#0B6E71;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px;">Utisci pacijenata</div>
+      <h1 style="font-family:'DM Serif Display';font-weight:800;font-size:52px;line-height:1.05;letter-spacing:-0.03em;margin:0 0 18px;color:#0A2A2E;max-width:760px;">Poverenje se gradi osmehom po osmeh</h1>
+      <div style="display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin-top:26px;">
+        <div style="display:flex;align-items:center;gap:12px;"><span style="color:#F5B301;font-size:24px;letter-spacing:3px;">★★★★★</span><span style="font-family:'DM Serif Display';font-weight:800;font-size:24px;color:#0A2A2E;">4.9</span></div>
+        <div style="width:1px;height:34px;background:#D6E4E4;"></div>
+        <div style="font-size:16px;color:#5B7280;">preko <strong style="color:#0A2A2E;">1.200</strong> ocena pacijenata</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section style="max-width:1200px;margin:0 auto;padding:64px 32px 88px;">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch;">
+      <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="12">
+        <div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+          <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+          <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">{{ r.text }}</p>
+          <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+            <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">{{ r.initial }}</span>
+            <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">{{ r.name }}</div><div style="font-size:12px;color:#5B7280;">{{ r.meta }}</div></div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:#0A2A2E;color:#fff;">
+    <div style="max-width:1200px;margin:0 auto;padding:64px 32px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;">
+      <div>
+        <h2 style="font-family:'DM Serif Display';font-weight:800;font-size:32px;line-height:1.15;letter-spacing:-0.02em;margin:0 0 8px;">Pridružite se hiljadama zadovoljnih pacijenata</h2>
+        <p style="font-size:17px;color:#A9C3C4;margin:0;">Zakažite pregled i uverite se sami.</p>
+      </div>
+      <a href="tel:+381113456789" style="display:inline-flex;align-items:center;gap:10px;background:#14B8A6;color:#04262A;font-family:'DM Serif Display';font-weight:700;font-size:16px;padding:16px 30px;border-radius:13px;">011 345 6789</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#04191C;color:#B6CCCD;padding:40px 0 32px;">
+    <div style="max-width:1200px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+      <div style="display:flex;align-items:center;gap:12px;"><span style="width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#0B6E71,#14B8A6);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'DM Serif Display';font-weight:700;font-size:19px;">P</span><span style="font-family:'DM Serif Display';font-weight:700;font-size:17px;color:#fff;">Ordinacija Pavlović</span></div>
+      <div style="font-size:13px;color:#6E8B8C;">© 2026 Stomatološka ordinacija Pavlović. Sva prava zadržana.</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const raw = [
+      ["Prvi put da sam kod zubara bez ikakve treme. Sve su objasnili do detalja, terapija potpuno bezbolna.", "Milica S.", "estetska stomatologija"],
+      ["Ugradili su mi implant i nova krunica se ne razlikuje od pravih zuba. Preporuka od srca!", "Nenad K.", "implantologija"],
+      ["Vodim decu ovde i konačno ne plaču pre pregleda. Divan, strpljiv tim.", "Jelena R.", "dečja stomatologija"],
+      ["Dr Pavlović je pravi profesionalac. Objasnio mi je svaku opciju bez žurbe i pritiska.", "Aleksandar T.", "oralna hirurgija"],
+      ["Beljenje zuba je premašilo očekivanja. Osmeh mi je nekoliko nijansi svetliji, a bez ikakve osetljivosti.", "Marija P.", "beljenje zuba"],
+      ["Konačno ordinacija gde te ne posmatraju kao broj. Ljubazni od recepcije do doktora.", "Dušan M.", "protetika"],
+      ["Postavili su mi fiksnu protezu i posle godinu dana zubi su savršeno poravnati. Vredelo je svakog dana.", "Ana V.", "ortodoncija"],
+      ["Došla sam sa jakim bolom bez najave i primili su me isti dan. Spasili su mi zub.", "Katarina J.", "endodoncija"],
+      ["Moderna oprema, čisto i sterilno, sve na najvišem nivou. Osećaj sigurnosti od ulaska.", "Bojan S.", "opšta stomatologija"],
+      ["Dr Ana mi je uradila ljuspice i osmeh izgleda potpuno prirodno. Niko ne primeti da nisu moji.", "Tijana K.", "estetska stomatologija"],
+      ["Strah od zubara me pratio ceo život. Ovde sam prvi put mirno sedeo u stolici.", "Miloš R.", "opšta stomatologija"],
+      ["Cene su korektne, a mogućnost plaćanja na rate mi je mnogo olakšala veći zahvat.", "Sandra L.", "protetika"],
+      ["Sin je dobio nalepnicu posle pregleda i sad jedva čeka sledeći. Fenomenalni sa decom.", "Ivana D.", "dečja stomatologija"],
+      ["Implant urađen pre tri godine i dalje besprekoran. Hvala celom timu.", "Zoran P.", "implantologija"],
+      ["Precizni, tačni sa terminima, bez čekanja u čekaonici. Retkost kod nas.", "Nataša M.", "opšta stomatologija"],
+      ["Uklonili su mi umnjak brzo i bezbolno. Očekivao sam mnogo goru priču.", "Vladimir S.", "oralna hirurgija"],
+      ["Redovno idem na kontrole i profesionalno čišćenje. Zubi mi nikad nisu bili zdraviji.", "Jovana T.", "opšta stomatologija"],
+      ["Ceo tim je topao i strpljiv. Nikad nisam osetila da nekome smetam sa pitanjima.", "Marina B.", "estetska stomatologija"],
+      ["Doktor je detaljno objasnio plan terapije i cenu unapred. Bez skrivenih troškova.", "Petar N.", "protetika"],
+      ["Providni aparat mi je promenio osmeh, a niko na poslu nije ni primetio da ga nosim.", "Anja K.", "ortodoncija"],
+      ["Došao sam po drugo mišljenje i dobio potpuno drugačiji, blaži plan terapije. Hvala.", "Goran V.", "endodoncija"],
+      ["Ćerki su vadili mlečni zub uz igru i priču. Bez suza, bez drame.", "Snežana R.", "dečja stomatologija"],
+      ["Estetska rekonstrukcija prednjih zuba izgleda savršeno. Konačno se smejem bez ustručavanja.", "Dragana M.", "estetska stomatologija"],
+      ["Sve pohvale za sterilizaciju i higijenu. Vidi se da im je to prioritet.", "Nikola J.", "opšta stomatologija"],
+      ["Bezbolna anestezija je stvarno bezbolna. Ni ubod nisam osetio.", "Stefan P.", "oralna hirurgija"],
+      ["Dobila sam kompletan digitalni sken i videla plan terapije na ekranu. Impresivno.", "Milena S.", "protetika"],
+      ["Ljubazni, tačni i vrhunski u poslu. Cela porodica je sada njihova.", "Aleksandra T.", "opšta stomatologija"],
+      ["Krunice se savršeno uklapaju sa ostalim zubima po boji i obliku. Majstorski.", "Branislav K.", "protetika"],
+      ["Posle godina zapuštanja vratili su mi zdrav osmeh strpljivo, korak po korak.", "Vesna D.", "opšta stomatologija"],
+      ["Termin sam zakazao telefonom za dva dana. Brzo i bez komplikacija.", "Marko L.", "opšta stomatologija"],
+      ["Lečenje kanala pod mikroskopom, nula bola i sačuvan prirodni zub.", "Teodora M.", "endodoncija"],
+      ["Deca ih obožavaju, a i mi roditelji smo mirni. Preporuka za sve mame i tate.", "Jelena S.", "dečja stomatologija"],
+      ["Profesionalno čišćenje i uklanjanje kamenca uradili temeljno i nežno.", "Igor P.", "opšta stomatologija"],
+      ["Implant i krunica za tri nedelje, sve po dogovoru. Nova sam osoba.", "Danijela K.", "implantologija"],
+      ["Objasnili su mi kako da pravilno održavam higijenu. Sad znam šta radim.", "Filip T.", "opšta stomatologija"],
+      ["Uradili su mi beljenje pred venčanje i osmeh je bio savršen na svim slikama.", "Kristina V.", "beljenje zuba"],
+      ["Nema više straha od stolice. Preporučila sam ih celoj familiji i prijateljima.", "Bojana M.", "opšta stomatologija"],
+      ["Dr Ilić mi je zaustavio povlačenje desni na vreme. Pravi stručnjak.", "Rade J.", "parodontologija"],
+      ["Sve urađeno iz prve, bez ponavljanja i doplata. Ozbiljna ekipa.", "Milan S.", "protetika"],
+      ["Toplina i profesionalnost na svakom koraku. Osećaš se kao kod svojih.", "Sofija P.", "estetska stomatologija"],
+      ["Vratili su mi samopouzdanje zajedno sa osmehom. Ne mogu da im se zahvalim dovoljno.", "Nevena K.", "estetska stomatologija"],
+      ["Precizna dijagnostika i jasan plan. Tačno sam znao šta me čeka i koliko košta.", "Đorđe M.", "implantologija"]
+    ];
+    return {
+      reviews: raw.map(([text, name, meta]) => ({ text, name, meta, initial: name[0] }))
+    };
+  }
+}
+</script>
+</body>
+</html>
