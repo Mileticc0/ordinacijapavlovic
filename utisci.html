@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-<style>
+<!DOCTYPE html><html lang="sr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Utisci pacijenata · Ordinacija Pavlović</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet"><style>
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { margin: 0; font-family: 'DM Sans', sans-serif; color: #0A2A2E; background: #ffffff; }
@@ -43,8 +30,14 @@
     [style*="font-size:30px"] { font-size: 24px !important; }
     iframe { min-height: 300px !important; }
   }
-</style>
-</helmet>
+</style><style>
+.svc{transition:transform .2s ease,box-shadow .2s ease}
+.svc:hover{transform:translateY(-4px);box-shadow:0 24px 44px -24px rgba(10,42,46,0.28)}
+.zoomable{transition:filter .25s ease;cursor:zoom-in}
+.zoomable:hover{filter:brightness(.6)}
+.ba{position:relative;aspect-ratio:3/2;overflow:hidden;touch-action:none;user-select:none}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+</style></head><body>
 <div style="min-height:100vh;background:#ffffff;">
 
   <!-- NAV -->
@@ -87,16 +80,258 @@
   <!-- REVIEWS -->
   <section style="max-width:1200px;margin:0 auto;padding:64px 32px 88px;">
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch;">
-      <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="12">
-        <div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
-          <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
-          <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">{{ r.text }}</p>
-          <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
-            <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">{{ r.initial }}</span>
-            <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">{{ r.name }}</div><div style="font-size:12px;color:#5B7280;">{{ r.meta }}</div></div>
-          </div>
-        </div>
-      </sc-for>
+      <div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Prvi put da sam kod zubara bez ikakve treme. Sve su objasnili do detalja, terapija potpuno bezbolna.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">M</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Milica S.</div><div style="font-size:12px;color:#5B7280;">estetska stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Ugradili su mi implant i nova krunica se ne razlikuje od pravih zuba. Preporuka od srca!</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">N</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Nenad K.</div><div style="font-size:12px;color:#5B7280;">implantologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Vodim decu ovde i konačno ne plaču pre pregleda. Divan, strpljiv tim.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">J</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Jelena R.</div><div style="font-size:12px;color:#5B7280;">dečja stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Dr Pavlović je pravi profesionalac. Objasnio mi je svaku opciju bez žurbe i pritiska.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">A</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Aleksandar T.</div><div style="font-size:12px;color:#5B7280;">oralna hirurgija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Beljenje zuba je premašilo očekivanja. Osmeh mi je nekoliko nijansi svetliji, a bez ikakve osetljivosti.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">M</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Marija P.</div><div style="font-size:12px;color:#5B7280;">beljenje zuba</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Konačno ordinacija gde te ne posmatraju kao broj. Ljubazni od recepcije do doktora.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">D</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Dušan M.</div><div style="font-size:12px;color:#5B7280;">protetika</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Postavili su mi fiksnu protezu i posle godinu dana zubi su savršeno poravnati. Vredelo je svakog dana.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">A</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Ana V.</div><div style="font-size:12px;color:#5B7280;">ortodoncija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Došla sam sa jakim bolom bez najave i primili su me isti dan. Spasili su mi zub.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">K</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Katarina J.</div><div style="font-size:12px;color:#5B7280;">endodoncija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Moderna oprema, čisto i sterilno, sve na najvišem nivou. Osećaj sigurnosti od ulaska.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">B</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Bojan S.</div><div style="font-size:12px;color:#5B7280;">opšta stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Dr Ana mi je uradila ljuspice i osmeh izgleda potpuno prirodno. Niko ne primeti da nisu moji.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">T</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Tijana K.</div><div style="font-size:12px;color:#5B7280;">estetska stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Strah od zubara me pratio ceo život. Ovde sam prvi put mirno sedeo u stolici.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">M</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Miloš R.</div><div style="font-size:12px;color:#5B7280;">opšta stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Cene su korektne, a mogućnost plaćanja na rate mi je mnogo olakšala veći zahvat.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">S</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Sandra L.</div><div style="font-size:12px;color:#5B7280;">protetika</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Sin je dobio nalepnicu posle pregleda i sad jedva čeka sledeći. Fenomenalni sa decom.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">I</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Ivana D.</div><div style="font-size:12px;color:#5B7280;">dečja stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Implant urađen pre tri godine i dalje besprekoran. Hvala celom timu.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">Z</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Zoran P.</div><div style="font-size:12px;color:#5B7280;">implantologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Precizni, tačni sa terminima, bez čekanja u čekaonici. Retkost kod nas.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">N</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Nataša M.</div><div style="font-size:12px;color:#5B7280;">opšta stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Uklonili su mi umnjak brzo i bezbolno. Očekivao sam mnogo goru priču.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">V</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Vladimir S.</div><div style="font-size:12px;color:#5B7280;">oralna hirurgija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Redovno idem na kontrole i profesionalno čišćenje. Zubi mi nikad nisu bili zdraviji.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">J</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Jovana T.</div><div style="font-size:12px;color:#5B7280;">opšta stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Ceo tim je topao i strpljiv. Nikad nisam osetila da nekome smetam sa pitanjima.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">M</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Marina B.</div><div style="font-size:12px;color:#5B7280;">estetska stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Doktor je detaljno objasnio plan terapije i cenu unapred. Bez skrivenih troškova.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">P</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Petar N.</div><div style="font-size:12px;color:#5B7280;">protetika</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Providni aparat mi je promenio osmeh, a niko na poslu nije ni primetio da ga nosim.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">A</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Anja K.</div><div style="font-size:12px;color:#5B7280;">ortodoncija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Došao sam po drugo mišljenje i dobio potpuno drugačiji, blaži plan terapije. Hvala.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">G</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Goran V.</div><div style="font-size:12px;color:#5B7280;">endodoncija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Ćerki su vadili mlečni zub uz igru i priču. Bez suza, bez drame.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">S</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Snežana R.</div><div style="font-size:12px;color:#5B7280;">dečja stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Estetska rekonstrukcija prednjih zuba izgleda savršeno. Konačno se smejem bez ustručavanja.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">D</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Dragana M.</div><div style="font-size:12px;color:#5B7280;">estetska stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Sve pohvale za sterilizaciju i higijenu. Vidi se da im je to prioritet.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">N</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Nikola J.</div><div style="font-size:12px;color:#5B7280;">opšta stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Bezbolna anestezija je stvarno bezbolna. Ni ubod nisam osetio.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">S</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Stefan P.</div><div style="font-size:12px;color:#5B7280;">oralna hirurgija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Dobila sam kompletan digitalni sken i videla plan terapije na ekranu. Impresivno.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">M</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Milena S.</div><div style="font-size:12px;color:#5B7280;">protetika</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Ljubazni, tačni i vrhunski u poslu. Cela porodica je sada njihova.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">A</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Aleksandra T.</div><div style="font-size:12px;color:#5B7280;">opšta stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Krunice se savršeno uklapaju sa ostalim zubima po boji i obliku. Majstorski.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">B</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Branislav K.</div><div style="font-size:12px;color:#5B7280;">protetika</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Posle godina zapuštanja vratili su mi zdrav osmeh strpljivo, korak po korak.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">V</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Vesna D.</div><div style="font-size:12px;color:#5B7280;">opšta stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Termin sam zakazao telefonom za dva dana. Brzo i bez komplikacija.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">M</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Marko L.</div><div style="font-size:12px;color:#5B7280;">opšta stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Lečenje kanala pod mikroskopom, nula bola i sačuvan prirodni zub.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">T</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Teodora M.</div><div style="font-size:12px;color:#5B7280;">endodoncija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Deca ih obožavaju, a i mi roditelji smo mirni. Preporuka za sve mame i tate.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">J</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Jelena S.</div><div style="font-size:12px;color:#5B7280;">dečja stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Profesionalno čišćenje i uklanjanje kamenca uradili temeljno i nežno.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">I</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Igor P.</div><div style="font-size:12px;color:#5B7280;">opšta stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Implant i krunica za tri nedelje, sve po dogovoru. Nova sam osoba.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">D</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Danijela K.</div><div style="font-size:12px;color:#5B7280;">implantologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Objasnili su mi kako da pravilno održavam higijenu. Sad znam šta radim.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">F</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Filip T.</div><div style="font-size:12px;color:#5B7280;">opšta stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Uradili su mi beljenje pred venčanje i osmeh je bio savršen na svim slikama.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">K</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Kristina V.</div><div style="font-size:12px;color:#5B7280;">beljenje zuba</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Nema više straha od stolice. Preporučila sam ih celoj familiji i prijateljima.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">B</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Bojana M.</div><div style="font-size:12px;color:#5B7280;">opšta stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Dr Ilić mi je zaustavio povlačenje desni na vreme. Pravi stručnjak.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">R</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Rade J.</div><div style="font-size:12px;color:#5B7280;">parodontologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Sve urađeno iz prve, bez ponavljanja i doplata. Ozbiljna ekipa.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">M</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Milan S.</div><div style="font-size:12px;color:#5B7280;">protetika</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Toplina i profesionalnost na svakom koraku. Osećaš se kao kod svojih.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">S</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Sofija P.</div><div style="font-size:12px;color:#5B7280;">estetska stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Vratili su mi samopouzdanje zajedno sa osmehom. Ne mogu da im se zahvalim dovoljno.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">N</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Nevena K.</div><div style="font-size:12px;color:#5B7280;">estetska stomatologija</div></div></div></div>
+<div style="background:#fff;border:1px solid #E9F1F1;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;height:100%;">
+   <div style="color:#F5B301;font-size:16px;letter-spacing:2px;">★★★★★</div>
+   <p style="font-size:15px;line-height:1.65;color:#334547;margin:0;">Precizna dijagnostika i jasan plan. Tačno sam znao šta me čeka i koliko košta.</p>
+   <div style="display:flex;align-items:center;gap:12px;border-top:1px solid #EEF4F4;padding-top:14px;">
+     <span style="width:40px;height:40px;flex:none;border-radius:50%;background:#EAF6F5;color:#0B6E71;font-family:'DM Serif Display';font-weight:700;display:flex;align-items:center;justify-content:center;">Đ</span>
+     <div><div style="font-family:'DM Serif Display';font-weight:700;font-size:14px;color:#0A2A2E;">Đorđe M.</div><div style="font-size:12px;color:#5B7280;">implantologija</div></div></div></div>
     </div>
   </section>
 
@@ -120,59 +355,4 @@
   </footer>
 
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    const raw = [
-      ["Prvi put da sam kod zubara bez ikakve treme. Sve su objasnili do detalja, terapija potpuno bezbolna.", "Milica S.", "estetska stomatologija"],
-      ["Ugradili su mi implant i nova krunica se ne razlikuje od pravih zuba. Preporuka od srca!", "Nenad K.", "implantologija"],
-      ["Vodim decu ovde i konačno ne plaču pre pregleda. Divan, strpljiv tim.", "Jelena R.", "dečja stomatologija"],
-      ["Dr Pavlović je pravi profesionalac. Objasnio mi je svaku opciju bez žurbe i pritiska.", "Aleksandar T.", "oralna hirurgija"],
-      ["Beljenje zuba je premašilo očekivanja. Osmeh mi je nekoliko nijansi svetliji, a bez ikakve osetljivosti.", "Marija P.", "beljenje zuba"],
-      ["Konačno ordinacija gde te ne posmatraju kao broj. Ljubazni od recepcije do doktora.", "Dušan M.", "protetika"],
-      ["Postavili su mi fiksnu protezu i posle godinu dana zubi su savršeno poravnati. Vredelo je svakog dana.", "Ana V.", "ortodoncija"],
-      ["Došla sam sa jakim bolom bez najave i primili su me isti dan. Spasili su mi zub.", "Katarina J.", "endodoncija"],
-      ["Moderna oprema, čisto i sterilno, sve na najvišem nivou. Osećaj sigurnosti od ulaska.", "Bojan S.", "opšta stomatologija"],
-      ["Dr Ana mi je uradila ljuspice i osmeh izgleda potpuno prirodno. Niko ne primeti da nisu moji.", "Tijana K.", "estetska stomatologija"],
-      ["Strah od zubara me pratio ceo život. Ovde sam prvi put mirno sedeo u stolici.", "Miloš R.", "opšta stomatologija"],
-      ["Cene su korektne, a mogućnost plaćanja na rate mi je mnogo olakšala veći zahvat.", "Sandra L.", "protetika"],
-      ["Sin je dobio nalepnicu posle pregleda i sad jedva čeka sledeći. Fenomenalni sa decom.", "Ivana D.", "dečja stomatologija"],
-      ["Implant urađen pre tri godine i dalje besprekoran. Hvala celom timu.", "Zoran P.", "implantologija"],
-      ["Precizni, tačni sa terminima, bez čekanja u čekaonici. Retkost kod nas.", "Nataša M.", "opšta stomatologija"],
-      ["Uklonili su mi umnjak brzo i bezbolno. Očekivao sam mnogo goru priču.", "Vladimir S.", "oralna hirurgija"],
-      ["Redovno idem na kontrole i profesionalno čišćenje. Zubi mi nikad nisu bili zdraviji.", "Jovana T.", "opšta stomatologija"],
-      ["Ceo tim je topao i strpljiv. Nikad nisam osetila da nekome smetam sa pitanjima.", "Marina B.", "estetska stomatologija"],
-      ["Doktor je detaljno objasnio plan terapije i cenu unapred. Bez skrivenih troškova.", "Petar N.", "protetika"],
-      ["Providni aparat mi je promenio osmeh, a niko na poslu nije ni primetio da ga nosim.", "Anja K.", "ortodoncija"],
-      ["Došao sam po drugo mišljenje i dobio potpuno drugačiji, blaži plan terapije. Hvala.", "Goran V.", "endodoncija"],
-      ["Ćerki su vadili mlečni zub uz igru i priču. Bez suza, bez drame.", "Snežana R.", "dečja stomatologija"],
-      ["Estetska rekonstrukcija prednjih zuba izgleda savršeno. Konačno se smejem bez ustručavanja.", "Dragana M.", "estetska stomatologija"],
-      ["Sve pohvale za sterilizaciju i higijenu. Vidi se da im je to prioritet.", "Nikola J.", "opšta stomatologija"],
-      ["Bezbolna anestezija je stvarno bezbolna. Ni ubod nisam osetio.", "Stefan P.", "oralna hirurgija"],
-      ["Dobila sam kompletan digitalni sken i videla plan terapije na ekranu. Impresivno.", "Milena S.", "protetika"],
-      ["Ljubazni, tačni i vrhunski u poslu. Cela porodica je sada njihova.", "Aleksandra T.", "opšta stomatologija"],
-      ["Krunice se savršeno uklapaju sa ostalim zubima po boji i obliku. Majstorski.", "Branislav K.", "protetika"],
-      ["Posle godina zapuštanja vratili su mi zdrav osmeh strpljivo, korak po korak.", "Vesna D.", "opšta stomatologija"],
-      ["Termin sam zakazao telefonom za dva dana. Brzo i bez komplikacija.", "Marko L.", "opšta stomatologija"],
-      ["Lečenje kanala pod mikroskopom, nula bola i sačuvan prirodni zub.", "Teodora M.", "endodoncija"],
-      ["Deca ih obožavaju, a i mi roditelji smo mirni. Preporuka za sve mame i tate.", "Jelena S.", "dečja stomatologija"],
-      ["Profesionalno čišćenje i uklanjanje kamenca uradili temeljno i nežno.", "Igor P.", "opšta stomatologija"],
-      ["Implant i krunica za tri nedelje, sve po dogovoru. Nova sam osoba.", "Danijela K.", "implantologija"],
-      ["Objasnili su mi kako da pravilno održavam higijenu. Sad znam šta radim.", "Filip T.", "opšta stomatologija"],
-      ["Uradili su mi beljenje pred venčanje i osmeh je bio savršen na svim slikama.", "Kristina V.", "beljenje zuba"],
-      ["Nema više straha od stolice. Preporučila sam ih celoj familiji i prijateljima.", "Bojana M.", "opšta stomatologija"],
-      ["Dr Ilić mi je zaustavio povlačenje desni na vreme. Pravi stručnjak.", "Rade J.", "parodontologija"],
-      ["Sve urađeno iz prve, bez ponavljanja i doplata. Ozbiljna ekipa.", "Milan S.", "protetika"],
-      ["Toplina i profesionalnost na svakom koraku. Osećaš se kao kod svojih.", "Sofija P.", "estetska stomatologija"],
-      ["Vratili su mi samopouzdanje zajedno sa osmehom. Ne mogu da im se zahvalim dovoljno.", "Nevena K.", "estetska stomatologija"],
-      ["Precizna dijagnostika i jasan plan. Tačno sam znao šta me čeka i koliko košta.", "Đorđe M.", "implantologija"]
-    ];
-    return {
-      reviews: raw.map(([text, name, meta]) => ({ text, name, meta, initial: name[0] }))
-    };
-  }
-}
-</script>
-</body>
-</html>
+</body></html>
